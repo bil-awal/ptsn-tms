@@ -1,0 +1,15 @@
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/bin/Debug/net8.0/TaskManagementSystem.Application.deps.json
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/bin/Debug/net8.0/TaskManagementSystem.Application.dll
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/bin/Debug/net8.0/TaskManagementSystem.Application.pdb
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/bin/Debug/net8.0/TaskManagementSystem.Domain.dll
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/bin/Debug/net8.0/TaskManagementSystem.Domain.pdb
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/obj/Debug/net8.0/TaskManagementSystem.Application.csproj.AssemblyReference.cache
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/obj/Debug/net8.0/TaskManagementSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/obj/Debug/net8.0/TaskManagementSystem.Application.AssemblyInfoInputs.cache
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/obj/Debug/net8.0/TaskManagementSystem.Application.AssemblyInfo.cs
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/obj/Debug/net8.0/TaskManagementSystem.Application.csproj.CoreCompileInputs.cache
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/obj/Debug/net8.0/TaskMana.0F84D606.Up2Date
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/obj/Debug/net8.0/TaskManagementSystem.Application.dll
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/obj/Debug/net8.0/refint/TaskManagementSystem.Application.dll
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/obj/Debug/net8.0/TaskManagementSystem.Application.pdb
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/obj/Debug/net8.0/ref/TaskManagementSystem.Application.dll

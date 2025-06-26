@@ -1,0 +1,307 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/TaskManagementSystem.API.csproj": {}
+  },
+  "projects": {
+    "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/TaskManagementSystem.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/TaskManagementSystem.API.csproj",
+        "projectName": "TaskManagementSystem.API",
+        "projectPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/TaskManagementSystem.API.csproj",
+        "packagesPath": "/Users/bilawalrizky/.nuget/packages/",
+        "outputPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/bilawalrizky/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/TaskManagementSystem.Application.csproj": {
+                "projectPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/TaskManagementSystem.Application.csproj"
+              },
+              "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/TaskManagementSystem.Infrastructure.csproj": {
+                "projectPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/TaskManagementSystem.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.1, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/TaskManagementSystem.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/TaskManagementSystem.Application.csproj",
+        "projectName": "TaskManagementSystem.Application",
+        "projectPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/TaskManagementSystem.Application.csproj",
+        "packagesPath": "/Users/bilawalrizky/.nuget/packages/",
+        "outputPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/bilawalrizky/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/TaskManagementSystem.Domain.csproj": {
+                "projectPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/TaskManagementSystem.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/TaskManagementSystem.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/TaskManagementSystem.Domain.csproj",
+        "projectName": "TaskManagementSystem.Domain",
+        "projectPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/TaskManagementSystem.Domain.csproj",
+        "packagesPath": "/Users/bilawalrizky/.nuget/packages/",
+        "outputPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/bilawalrizky/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/TaskManagementSystem.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/TaskManagementSystem.Infrastructure.csproj",
+        "projectName": "TaskManagementSystem.Infrastructure",
+        "projectPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/TaskManagementSystem.Infrastructure.csproj",
+        "packagesPath": "/Users/bilawalrizky/.nuget/packages/",
+        "outputPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/bilawalrizky/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/TaskManagementSystem.Application.csproj": {
+                "projectPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/TaskManagementSystem.Application.csproj"
+              },
+              "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/TaskManagementSystem.Domain.csproj": {
+                "projectPath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/TaskManagementSystem.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

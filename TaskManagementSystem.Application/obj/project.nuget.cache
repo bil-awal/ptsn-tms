@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "EPox15mqFgk=",
+  "success": true,
+  "projectFilePath": "/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Application/TaskManagementSystem.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/bilawalrizky/.nuget/packages/fluentvalidation/11.3.0/fluentvalidation.11.3.0.nupkg.sha512",
+    "/Users/bilawalrizky/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/bilawalrizky/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

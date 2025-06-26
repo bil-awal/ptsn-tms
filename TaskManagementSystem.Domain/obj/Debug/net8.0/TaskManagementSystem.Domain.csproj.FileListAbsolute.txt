@@ -1,0 +1,11 @@
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/bin/Debug/net8.0/TaskManagementSystem.Domain.deps.json
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/bin/Debug/net8.0/TaskManagementSystem.Domain.dll
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/bin/Debug/net8.0/TaskManagementSystem.Domain.pdb
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/obj/Debug/net8.0/TaskManagementSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/obj/Debug/net8.0/TaskManagementSystem.Domain.AssemblyInfoInputs.cache
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/obj/Debug/net8.0/TaskManagementSystem.Domain.AssemblyInfo.cs
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/obj/Debug/net8.0/TaskManagementSystem.Domain.csproj.CoreCompileInputs.cache
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/obj/Debug/net8.0/TaskManagementSystem.Domain.dll
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/obj/Debug/net8.0/refint/TaskManagementSystem.Domain.dll
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/obj/Debug/net8.0/TaskManagementSystem.Domain.pdb
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Domain/obj/Debug/net8.0/ref/TaskManagementSystem.Domain.dll

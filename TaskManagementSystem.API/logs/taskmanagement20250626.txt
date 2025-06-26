@@ -1,0 +1,48 @@
+2025-06-26 11:34:47.281 +07:00 [INF] Saved 2 entities to in-memory store.
+2025-06-26 11:34:47.356 +07:00 [INF] Initial data seeded successfully
+2025-06-26 11:34:47.366 +07:00 [INF] Starting Task Management System API
+2025-06-26 11:34:47.442 +07:00 [INF] Now listening on: http://localhost:5232
+2025-06-26 11:34:47.443 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-26 11:34:47.444 +07:00 [INF] Hosting environment: Development
+2025-06-26 11:34:47.444 +07:00 [INF] Content root path: /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API
+2025-06-26 11:35:37.032 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5232/ - null null
+2025-06-26 11:35:37.115 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-06-26 11:35:37.133 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5232/ - 404 0 null 102.7798ms
+2025-06-26 11:35:37.158 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5232/, Response status code: 404
+2025-06-26 11:37:02.327 +07:00 [INF] Application is shutting down...
+2025-06-26 11:37:23.152 +07:00 [INF] Saved 2 entities to in-memory store.
+2025-06-26 11:37:23.226 +07:00 [INF] Initial data seeded successfully
+2025-06-26 11:37:23.229 +07:00 [INF] Starting Task Management System API
+2025-06-26 11:37:23.267 +07:00 [INF] Now listening on: http://localhost:5232
+2025-06-26 11:37:23.268 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-26 11:37:23.269 +07:00 [INF] Hosting environment: Development
+2025-06-26 11:37:23.269 +07:00 [INF] Content root path: /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API
+2025-06-26 11:37:27.546 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5232/ - null null
+2025-06-26 11:37:27.619 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-06-26 11:37:27.629 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5232/ - 404 0 null 84.7238ms
+2025-06-26 11:37:27.681 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5232/, Response status code: 404
+2025-06-26 11:38:19.973 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5232/swagger - null null
+2025-06-26 11:38:19.986 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5232/swagger - 301 0 null 12.9252ms
+2025-06-26 11:38:19.995 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5232/swagger/index.html - null null
+2025-06-26 11:38:20.119 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5232/swagger/index.html - 200 null text/html;charset=utf-8 123.7888ms
+2025-06-26 11:38:20.182 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5232/swagger/swagger-ui.css - null null
+2025-06-26 11:38:20.199 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5232/swagger/swagger-ui-bundle.js - null null
+2025-06-26 11:38:20.202 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5232/swagger/swagger-ui-standalone-preset.js - null null
+2025-06-26 11:38:20.256 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-06-26 11:38:20.257 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-06-26 11:38:20.266 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5232/swagger/swagger-ui.css - 200 152034 text/css 83.2486ms
+2025-06-26 11:38:20.266 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5232/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 64.2761ms
+2025-06-26 11:38:20.268 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-06-26 11:38:20.268 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5232/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 69.692ms
+2025-06-26 11:38:20.330 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5232/swagger/swagger-ui-standalone-preset.js - null null
+2025-06-26 11:38:20.330 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5232/swagger/swagger-ui-bundle.js - null null
+2025-06-26 11:38:20.333 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-06-26 11:38:20.334 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5232/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 4.3642ms
+2025-06-26 11:38:20.341 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-06-26 11:38:20.342 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5232/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 11.8289ms
+2025-06-26 11:38:20.480 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5232/swagger/v1/swagger.json - null null
+2025-06-26 11:38:20.507 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5232/swagger/favicon-32x32.png - null null
+2025-06-26 11:38:20.508 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-06-26 11:38:20.508 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5232/swagger/favicon-32x32.png - 200 628 image/png 0.8721ms
+2025-06-26 11:38:20.630 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5232/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 150.1529ms
+2025-06-26 11:39:21.024 +07:00 [INF] Application is shutting down...
