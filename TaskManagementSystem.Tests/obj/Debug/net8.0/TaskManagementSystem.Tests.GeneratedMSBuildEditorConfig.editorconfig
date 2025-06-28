@@ -1,5 +1,5 @@
 is_global = true
-build_property.DesignTimeBuild = 
+build_property.DesignTimeBuild = true
 build_property.MSBuildProjectFullPath = /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/TaskManagementSystem.Tests.csproj
 build_property.DebugSponsorLink = 
 build_property.TargetFramework = net8.0

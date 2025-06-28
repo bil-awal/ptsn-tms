@@ -1,0 +1,17 @@
+**/bin/
+**/obj/
+.git/
+.vs/
+.vscode/
+*.user
+*.suo
+*.cache
+*.log
+.DS_Store
+Dockerfile
+.dockerignore
+.gitignore
+.gitattributes
+README.md
+LICENSE
+*.md

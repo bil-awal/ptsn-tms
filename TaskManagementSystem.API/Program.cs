@@ -8,6 +8,10 @@ using TaskManagementSystem.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure for Heroku deployment
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+builder.WebHost.UseUrls($"http://+:{port}");
+
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -38,13 +42,16 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
-        builder =>
+        policy =>
         {
-            builder.AllowAnyOrigin()
+            policy.AllowAnyOrigin()
                    .AllowAnyMethod()
                    .AllowAnyHeader();
         });
 });
+
+// Add health checks
+builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
@@ -54,10 +61,26 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+else
+{
+    // Enable Swagger in production for Heroku
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "TaskManagement API V1");
+        c.RoutePrefix = string.Empty; // Set Swagger UI at app root
+    });
+}
 
-app.UseHttpsRedirection();
+// Comment out HTTPS redirection for Heroku
+// app.UseHttpsRedirection();
+
 app.UseCors("AllowAll");
 app.UseAuthorization();
+
+// Map health check endpoint
+app.MapHealthChecks("/health");
+
 app.MapControllers();
 
 // Seed initial data
@@ -80,8 +103,8 @@ using (var scope = app.Services.CreateScope())
     var user2 = new TaskManagementSystem.Domain.Entities.User
     {
         Id = Guid.NewGuid(),
-        Name = "Jane Smith",
-        Email = "jane.smith@example.com",
+        Name = "Bil Awal",
+        Email = "bilawalfr@gmail.com",
         CreatedAt = DateTime.UtcNow,
         UpdatedAt = DateTime.UtcNow
     };
@@ -93,6 +116,6 @@ using (var scope = app.Services.CreateScope())
     Log.Information("Initial data seeded successfully");
 }
 
-Log.Information("Starting Task Management System API");
+Log.Information("Starting Task Management System API on port {Port}", port);
 
 app.Run();
