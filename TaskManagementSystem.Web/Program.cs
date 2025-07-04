@@ -2,6 +2,10 @@ using TaskManagementSystem.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure for Heroku deployment
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+builder.WebHost.UseUrls($"http://+:{port}");
+
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
@@ -33,7 +37,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+// Comment out HTTPS redirection for Heroku
+// app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
