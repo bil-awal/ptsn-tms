@@ -12,7 +12,9 @@
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/bin/Debug/net8.0/Microsoft.OpenApi.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/bin/Debug/net8.0/Serilog.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/bin/Debug/net8.0/Serilog.AspNetCore.dll
@@ -39,6 +41,7 @@
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/obj/Debug/net8.0/TaskManagementSystem.API.csproj.CoreCompileInputs.cache
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/obj/Debug/net8.0/TaskManagementSystem.API.MvcApplicationPartsAssemblyInfo.cs
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/obj/Debug/net8.0/TaskManagementSystem.API.MvcApplicationPartsAssemblyInfo.cache
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/obj/Debug/net8.0/TaskManagementSystem.API.sourcelink.json
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/obj/Debug/net8.0/staticwebassets.build.json
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/obj/Debug/net8.0/staticwebassets.development.json
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.API/obj/Debug/net8.0/staticwebassets/msbuild.TaskManagementSystem.API.Microsoft.AspNetCore.StaticWebAssets.props

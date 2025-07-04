@@ -1,31 +1,62 @@
 # Task Management System
 
-A clean architecture implementation of a Task Management System built with .NET 8, following SOLID principles.
+A full-stack Task Management System built with .NET 8, featuring a clean architecture backend API and a modern ASP.NET MVC frontend with responsive UI/UX design.
 
 ## Features
 
+### Backend (API)
 - Create, update, delete, and retrieve tasks
 - Assign tasks to users
 - Task validation (due dates, required fields)
-- Comprehensive logging
-- Unit tests
-- RESTful API
+- Comprehensive logging with Serilog
+- Unit tests with xUnit
+- RESTful API with Swagger documentation
 - In-memory database for easy testing
+
+### Frontend (Web)
+- Modern, responsive UI design
+- Dark/Light theme support
+- Real-time task management
+- Interactive dashboard with statistics
+- Advanced filtering and search
+- User-friendly task creation and editing
+- Mobile-responsive design
 
 ## Architecture
 
-The solution follows Clean Architecture principles with the following layers:
+The solution follows Clean Architecture principles with the following projects:
 
+### Backend
 - **Domain**: Core business entities and interfaces
 - **Application**: Business logic, DTOs, validators, and services
 - **Infrastructure**: Data access implementation, repositories
 - **API**: RESTful endpoints, dependency injection configuration
 
+### Frontend
+- **Web**: ASP.NET MVC application with modern UI/UX
+  - Controllers for handling requests
+  - Services for API communication
+  - Responsive views with Bootstrap 5
+  - Custom CSS for modern styling
+
 ## Running the Application
 
-1. Ensure you have .NET 8 SDK or later installed
-2. Run the setup script: `./setup.sh`
-3. The API will start on `https://localhost:7001` and `http://localhost:5000`
+### Prerequisites
+- .NET 8 SDK or later
+- Visual Studio 2022 or VS Code (optional)
+
+### Running the Backend API
+1. Navigate to the API directory: `cd TaskManagementSystem.API`
+2. Run: `dotnet run`
+3. The API will start on `https://localhost:5001`
+
+### Running the Frontend Web Application
+1. Navigate to the Web directory: `cd TaskManagementSystem.Web`
+2. Run: `dotnet run`
+3. Open your browser and navigate to `https://localhost:7002`
+
+### Quick Start
+Run the setup script to start both applications: `./setup.sh`
 
 ## API Endpoints
 
@@ -56,6 +87,7 @@ Run unit tests with: `dotnet test`
 
 ## Technologies Used
 
+### Backend
 - .NET 8
 - Entity Framework Core (In-Memory)
 - Serilog for logging
@@ -63,3 +95,12 @@ Run unit tests with: `dotnet test`
 - xUnit for testing
 - Moq for mocking
 - FluentAssertions
+- Swagger/OpenAPI
+
+### Frontend
+- ASP.NET Core MVC
+- Bootstrap 5
+- Font Awesome icons
+- jQuery
+- Custom modern CSS
+- Responsive design principles

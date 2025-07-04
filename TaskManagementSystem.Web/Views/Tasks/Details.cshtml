@@ -1,0 +1,199 @@
+@model TaskViewModel
+@{
+    ViewData["Title"] = "Task Details";
+}
+
+<!-- Page Header -->
+<div class="row mb-4">
+    <div class="col">
+        <h1 class="h2 mb-0">
+            <i class="fas fa-info-circle me-2"></i>Task Details
+        </h1>
+        <p class="text-muted">View complete task information</p>
+    </div>
+    <div class="col-auto">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">
+            <i class="fas fa-edit me-2"></i>Edit
+        </a>
+        <a asp-action="Index" class="btn btn-light">
+            <i class="fas fa-arrow-left me-2"></i>Back to List
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-start justify-content-between mb-4">
+                    <div>
+                        <h3 class="mb-2">@Model.Title</h3>
+                        <div class="d-flex gap-2 flex-wrap">
+                            @{
+                                string statusClass = Model.Status switch
+                                {
+                                    TaskManagementSystem.Web.Models.TaskStatus.Todo => "badge-status-todo",
+                                    TaskManagementSystem.Web.Models.TaskStatus.InProgress => "badge-status-inprogress",
+                                    TaskManagementSystem.Web.Models.TaskStatus.Completed => "badge-status-completed",
+                                    TaskManagementSystem.Web.Models.TaskStatus.Cancelled => "badge-status-cancelled",
+                                    _ => "badge-secondary"
+                                };
+                                
+                                string priorityClass = Model.Priority switch
+                                {
+                                    TaskPriority.Low => "badge-priority-low",
+                                    TaskPriority.Medium => "badge-priority-medium",
+                                    TaskPriority.High => "badge-priority-high",
+                                    TaskPriority.Urgent => "badge-priority-urgent",
+                                    _ => "badge-secondary"
+                                };
+                            }
+                            <span class="badge @statusClass">
+                                <i class="fas fa-circle me-1" style="font-size: 8px;"></i>
+                                @Model.Status
+                            </span>
+                            <span class="badge @priorityClass">
+                                <i class="fas fa-flag me-1"></i>
+                                @Model.Priority Priority
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <small class="text-muted">ID: @Model.Id</small>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <h5 class="text-muted mb-3">
+                        <i class="fas fa-align-left me-2"></i>Description
+                    </h5>
+                    <p class="lead">@(string.IsNullOrWhiteSpace(Model.Description) ? "No description provided." : Model.Description)</p>
+                </div>
+                
+                <hr />
+                
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary me-3">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div>
+                                <small class="text-muted d-block">Due Date</small>
+                                @if (Model.DueDate < DateTime.Now && Model.Status != TaskManagementSystem.Web.Models.TaskStatus.Completed && Model.Status != TaskManagementSystem.Web.Models.TaskStatus.Cancelled)
+                                {
+                                    <strong class="text-danger">
+                                        <i class="fas fa-exclamation-triangle me-1"></i>
+                                        @Model.DueDate.ToString("MMMM dd, yyyy") (Overdue)
+                                    </strong>
+                                }
+                                else
+                                {
+                                    <strong>@Model.DueDate.ToString("MMMM dd, yyyy")</strong>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box bg-success bg-opacity-10 text-success me-3">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div>
+                                <small class="text-muted d-block">Assigned To</small>
+                                <strong>@(string.IsNullOrEmpty(Model.AssignedToUserName) ? "Unassigned" : Model.AssignedToUserName)</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box bg-info bg-opacity-10 text-info me-3">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <small class="text-muted d-block">Created</small>
+                                <strong>@Model.CreatedAt.ToString("MMMM dd, yyyy 'at' h:mm tt")</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box bg-warning bg-opacity-10 text-warning me-3">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div>
+                                <small class="text-muted d-block">Last Updated</small>
+                                <strong>@Model.UpdatedAt.ToString("MMMM dd, yyyy 'at' h:mm tt")</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4">
+        <div class="card border-0 bg-light">
+            <div class="card-body">
+                <h5 class="card-title mb-3">
+                    <i class="fas fa-cog me-2"></i>Actions
+                </h5>
+                <div class="d-grid gap-2">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">
+                        <i class="fas fa-edit me-2"></i>Edit Task
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-outline-danger">
+                        <i class="fas fa-trash me-2"></i>Delete Task
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        @if (Model.Status != TaskManagementSystem.Web.Models.TaskStatus.Completed && Model.Status != TaskManagementSystem.Web.Models.TaskStatus.Cancelled)
+        {
+            <div class="card mt-3 border-warning">
+                <div class="card-body">
+                    <h6 class="card-title text-warning">
+                        <i class="fas fa-lightbulb me-2"></i>Quick Update
+                    </h6>
+                    <p class="small mb-2">Change status to:</p>
+                    <div class="d-grid gap-2">
+                        @if (Model.Status != TaskManagementSystem.Web.Models.TaskStatus.InProgress)
+                        {
+                            <button class="btn btn-sm btn-outline-primary" onclick="updateStatus(2)">
+                                <i class="fas fa-play me-1"></i>Start Working
+                            </button>
+                        }
+                        <button class="btn btn-sm btn-outline-success" onclick="updateStatus(3)">
+                            <i class="fas fa-check me-1"></i>Mark as Complete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+    }
+</style>
+
+@section Scripts {
+    <script>
+        function updateStatus(status) {
+            // This would typically make an AJAX call to update the status
+            alert('Status update functionality to be implemented');
+        }
+    </script>
+}

@@ -10,6 +10,7 @@
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/obj/Debug/net8.0/TaskManagementSystem.Infrastructure.AssemblyInfoInputs.cache
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/obj/Debug/net8.0/TaskManagementSystem.Infrastructure.AssemblyInfo.cs
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/obj/Debug/net8.0/TaskManagementSystem.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/obj/Debug/net8.0/TaskManagementSystem.Infrastructure.sourcelink.json
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/obj/Debug/net8.0/TaskMana.43AAB007.Up2Date
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/obj/Debug/net8.0/TaskManagementSystem.Infrastructure.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Infrastructure/obj/Debug/net8.0/refint/TaskManagementSystem.Infrastructure.dll

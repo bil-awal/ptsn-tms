@@ -1,0 +1,91 @@
+@model TaskViewModel
+@{
+    ViewData["Title"] = "Delete Task";
+}
+
+<!-- Page Header -->
+<div class="row mb-4">
+    <div class="col">
+        <h1 class="h2 mb-0">
+            <i class="fas fa-trash-alt me-2"></i>Delete Task
+        </h1>
+        <p class="text-muted">Confirm task deletion</p>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <div class="card border-danger">
+            <div class="card-body text-center py-5">
+                <i class="fas fa-exclamation-triangle fa-4x text-danger mb-4"></i>
+                <h3 class="mb-3">Are you sure you want to delete this task?</h3>
+                <p class="text-muted mb-4">This action cannot be undone. The task will be permanently removed.</p>
+                
+                <div class="card bg-light border-0 mb-4">
+                    <div class="card-body text-start">
+                        <h5 class="mb-3">@Model.Title</h5>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <small class="text-muted d-block">Status</small>
+                                @{
+                                    string statusClass = Model.Status switch
+                                    {
+                                        TaskManagementSystem.Web.Models.TaskStatus.Todo => "badge-status-todo",
+                                        TaskManagementSystem.Web.Models.TaskStatus.InProgress => "badge-status-inprogress",
+                                        TaskManagementSystem.Web.Models.TaskStatus.Completed => "badge-status-completed",
+                                        TaskManagementSystem.Web.Models.TaskStatus.Cancelled => "badge-status-cancelled",
+                                        _ => "badge-secondary"
+                                    };
+                                }
+                                <span class="badge @statusClass">@Model.Status</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <small class="text-muted d-block">Priority</small>
+                                @{
+                                    string priorityClass = Model.Priority switch
+                                    {
+                                        TaskPriority.Low => "badge-priority-low",
+                                        TaskPriority.Medium => "badge-priority-medium",
+                                        TaskPriority.High => "badge-priority-high",
+                                        TaskPriority.Urgent => "badge-priority-urgent",
+                                        _ => "badge-secondary"
+                                    };
+                                }
+                                <span class="badge @priorityClass">@Model.Priority</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <small class="text-muted d-block">Due Date</small>
+                                <strong>@Model.DueDate.ToString("MMM dd, yyyy")</strong>
+                            </div>
+                            <div class="col-sm-6">
+                                <small class="text-muted d-block">Assigned To</small>
+                                <strong>@(string.IsNullOrEmpty(Model.AssignedToUserName) ? "Unassigned" : Model.AssignedToUserName)</strong>
+                            </div>
+                        </div>
+                        @if (!string.IsNullOrWhiteSpace(Model.Description))
+                        {
+                            <hr />
+                            <small class="text-muted d-block mb-1">Description</small>
+                            <p class="mb-0">@Model.Description</p>
+                        }
+                    </div>
+                </div>
+                
+                <form asp-action="Delete" method="post" class="d-inline">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn btn-danger me-2">
+                        <i class="fas fa-trash me-2"></i>Yes, Delete Task
+                    </button>
+                    <a asp-action="Index" class="btn btn-light">
+                        <i class="fas fa-times me-2"></i>Cancel
+                    </a>
+                </form>
+            </div>
+        </div>
+        
+        <div class="alert alert-info mt-3" role="alert">
+            <i class="fas fa-info-circle me-2"></i>
+            <strong>Tip:</strong> Consider marking the task as "Cancelled" instead of deleting it to maintain a complete history.
+        </div>
+    </div>
+</div>

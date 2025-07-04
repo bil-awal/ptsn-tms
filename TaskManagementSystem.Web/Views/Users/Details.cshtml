@@ -1,0 +1,239 @@
+@model UserViewModel
+@{
+    ViewData["Title"] = "User Details";
+    var userTasks = ViewBag.UserTasks as IEnumerable<TaskViewModel> ?? new List<TaskViewModel>();
+}
+
+<!-- Page Header -->
+<div class="row mb-4">
+    <div class="col">
+        <h1 class="h2 mb-0">
+            <i class="fas fa-user me-2"></i>User Details
+        </h1>
+        <p class="text-muted">View user information and assigned tasks</p>
+    </div>
+    <div class="col-auto">
+        <a asp-action="Index" class="btn btn-light">
+            <i class="fas fa-arrow-left me-2"></i>Back to Users
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <div class="avatar-xxl bg-gradient-primary text-white rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center">
+                    <span class="display-4">@Model.Name.Substring(0, 1).ToUpper()</span>
+                </div>
+                <h3 class="mb-1">@Model.Name</h3>
+                <p class="text-muted mb-3">
+                    <i class="fas fa-envelope me-1"></i>
+                    <a href="mailto:@Model.Email" class="text-decoration-none">@Model.Email</a>
+                </p>
+                <div class="d-flex justify-content-center gap-2">
+                    <button class="btn btn-outline-primary btn-sm" onclick="copyToClipboard('@Model.Email')">
+                        <i class="fas fa-copy me-1"></i>Copy Email
+                    </button>
+                    <a href="mailto:@Model.Email" class="btn btn-outline-secondary btn-sm">
+                        <i class="fas fa-envelope me-1"></i>Send Email
+                    </a>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent">
+                <small class="text-muted">
+                    <i class="fas fa-id-badge me-1"></i>
+                    User ID: @Model.Id
+                </small>
+            </div>
+        </div>
+        
+        <!-- User Stats -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-3">
+                    <i class="fas fa-chart-pie me-2"></i>Task Statistics
+                </h5>
+                @{
+                    var totalTasks = userTasks.Count();
+                    var todoTasks = userTasks.Count(t => t.Status == TaskManagementSystem.Web.Models.TaskStatus.Todo);
+                    var inProgressTasks = userTasks.Count(t => t.Status == TaskManagementSystem.Web.Models.TaskStatus.InProgress);
+                    var completedTasks = userTasks.Count(t => t.Status == TaskManagementSystem.Web.Models.TaskStatus.Completed);
+                    var overdueTasks = userTasks.Count(t => t.DueDate < DateTime.Now && t.Status != TaskManagementSystem.Web.Models.TaskStatus.Completed && t.Status != TaskManagementSystem.Web.Models.TaskStatus.Cancelled);
+                }
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Total Tasks</span>
+                        <strong>@totalTasks</strong>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                        <div class="progress-bar bg-primary" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Completed</span>
+                        <strong>@completedTasks</strong>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                        <div class="progress-bar bg-success" style="width: @(totalTasks > 0 ? (completedTasks * 100 / totalTasks) : 0)%"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>In Progress</span>
+                        <strong>@inProgressTasks</strong>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                        <div class="progress-bar bg-warning" style="width: @(totalTasks > 0 ? (inProgressTasks * 100 / totalTasks) : 0)%"></div>
+                    </div>
+                </div>
+                @if (overdueTasks > 0)
+                {
+                    <div class="alert alert-danger alert-sm mt-3 mb-0">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>@overdueTasks</strong> overdue task(s)
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header bg-transparent">
+                <h5 class="mb-0">
+                    <i class="fas fa-tasks me-2"></i>Assigned Tasks (@totalTasks)
+                </h5>
+            </div>
+            <div class="card-body">
+                @if (userTasks.Any())
+                {
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Status</th>
+                                    <th>Priority</th>
+                                    <th>Due Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var task in userTasks.OrderByDescending(t => t.CreatedAt))
+                                {
+                                    <tr>
+                                        <td>
+                                            <div class="fw-medium">@task.Title</div>
+                                            @if (!string.IsNullOrWhiteSpace(task.Description))
+                                            {
+                                                <small class="text-muted">@task.Description.Substring(0, Math.Min(task.Description.Length, 50))...</small>
+                                            }
+                                        </td>
+                                        <td>
+                                            @{
+                                                string statusClass = task.Status switch
+                                                {
+                                                    TaskManagementSystem.Web.Models.TaskStatus.Todo => "badge-status-todo",
+                                                    TaskManagementSystem.Web.Models.TaskStatus.InProgress => "badge-status-inprogress",
+                                                    TaskManagementSystem.Web.Models.TaskStatus.Completed => "badge-status-completed",
+                                                    TaskManagementSystem.Web.Models.TaskStatus.Cancelled => "badge-status-cancelled",
+                                                    _ => "badge-secondary"
+                                                };
+                                            }
+                                            <span class="badge @statusClass">@task.Status</span>
+                                        </td>
+                                        <td>
+                                            @{
+                                                string priorityClass = task.Priority switch
+                                                {
+                                                    TaskPriority.Low => "badge-priority-low",
+                                                    TaskPriority.Medium => "badge-priority-medium",
+                                                    TaskPriority.High => "badge-priority-high",
+                                                    TaskPriority.Urgent => "badge-priority-urgent",
+                                                    _ => "badge-secondary"
+                                                };
+                                            }
+                                            <span class="badge @priorityClass">@task.Priority</span>
+                                        </td>
+                                        <td>
+                                            @if (task.DueDate < DateTime.Now && task.Status != TaskManagementSystem.Web.Models.TaskStatus.Completed)
+                                            {
+                                                <span class="text-danger">
+                                                    <i class="fas fa-exclamation-circle me-1"></i>
+                                                    @task.DueDate.ToString("MMM dd, yyyy")
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                @task.DueDate.ToString("MMM dd, yyyy")
+                                            }
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <a asp-controller="Tasks" asp-action="Details" asp-route-id="@task.Id" 
+                                                   class="btn btn-outline-primary" data-bs-toggle="tooltip" title="View">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                <a asp-controller="Tasks" asp-action="Edit" asp-route-id="@task.Id" 
+                                                   class="btn btn-outline-secondary" data-bs-toggle="tooltip" title="Edit">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+                else
+                {
+                    <div class="text-center py-4">
+                        <i class="fas fa-tasks fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">No tasks assigned to this user yet.</p>
+                        <a asp-controller="Tasks" asp-action="Create" class="btn btn-primary btn-sm">
+                            <i class="fas fa-plus-circle me-2"></i>Create Task
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .avatar-xxl {
+        width: 120px;
+        height: 120px;
+        font-weight: 600;
+    }
+    
+    .alert-sm {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+    }
+</style>
+
+@section Scripts {
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                // Show success message
+                var toastHtml = `
+                    <div class="toast position-fixed bottom-0 end-0 m-3" role="alert">
+                        <div class="toast-body">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Email copied to clipboard!
+                        </div>
+                    </div>
+                `;
+                document.body.insertAdjacentHTML('beforeend', toastHtml);
+                var toast = new bootstrap.Toast(document.querySelector('.toast'));
+                toast.show();
+                setTimeout(() => document.querySelector('.toast').remove(), 3000);
+            });
+        }
+    </script>
+}

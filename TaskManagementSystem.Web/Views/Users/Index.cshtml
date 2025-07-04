@@ -1,0 +1,119 @@
+@model IEnumerable<UserViewModel>
+@{
+    ViewData["Title"] = "Users";
+}
+
+<!-- Page Header -->
+<div class="row mb-4">
+    <div class="col">
+        <h1 class="h2 mb-0">
+            <i class="fas fa-users me-2"></i>Users
+        </h1>
+        <p class="text-muted">Manage system users</p>
+    </div>
+    <div class="col-auto">
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="fas fa-user-plus me-2"></i>Add New User
+        </a>
+    </div>
+</div>
+
+<!-- Users Grid -->
+@if (Model.Any())
+{
+    <div class="row g-4">
+        @foreach (var user in Model)
+        {
+            <div class="col-xl-4 col-md-6">
+                <div class="card h-100 user-card">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <div class="avatar-lg bg-gradient-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center">
+                                <span class="h3 mb-0">@user.Name.Substring(0, 1).ToUpper()</span>
+                            </div>
+                            <h5 class="mb-1">@user.Name</h5>
+                            <p class="text-muted mb-0">
+                                <i class="fas fa-envelope me-1"></i>
+                                <a href="mailto:@user.Email" class="text-decoration-none">@user.Email</a>
+                            </p>
+                        </div>
+                        
+                        <div class="d-flex justify-content-center gap-2">
+                            <a asp-action="Details" asp-route-id="@user.Id" class="btn btn-sm btn-outline-primary">
+                                <i class="fas fa-eye me-1"></i>View Details
+                            </a>
+                            <button class="btn btn-sm btn-outline-secondary" onclick="copyToClipboard('@user.Email')" 
+                                    data-bs-toggle="tooltip" title="Copy email">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top">
+                        <small class="text-muted">
+                            <i class="fas fa-id-badge me-1"></i>
+                            ID: @user.Id
+                        </small>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div class="card">
+        <div class="card-body text-center py-5">
+            <i class="fas fa-users fa-4x text-muted mb-3"></i>
+            <h4>No users found</h4>
+            <p class="text-muted mb-4">Start by adding your first user to the system.</p>
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="fas fa-user-plus me-2"></i>Add First User
+            </a>
+        </div>
+    </div>
+}
+
+<style>
+    .avatar-lg {
+        width: 80px;
+        height: 80px;
+        font-weight: 600;
+    }
+    
+    .user-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .user-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    }
+</style>
+
+@section Scripts {
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                // Show success toast or notification
+                var toastHtml = `
+                    <div class="toast position-fixed bottom-0 end-0 m-3" role="alert">
+                        <div class="toast-body">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Email copied to clipboard!
+                        </div>
+                    </div>
+                `;
+                document.body.insertAdjacentHTML('beforeend', toastHtml);
+                var toast = new bootstrap.Toast(document.querySelector('.toast'));
+                toast.show();
+                setTimeout(() => document.querySelector('.toast').remove(), 3000);
+            }).catch(function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+}

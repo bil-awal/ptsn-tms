@@ -1,5 +1,6 @@
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/.msCoverageSourceRootsMapping_TaskManagementSystem.Tests
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/CoverletSourceRootsMapping_TaskManagementSystem.Tests
-/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/xunit.runner.visualstudio.testadapter.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/xunit.runner.reporters.netcoreapp10.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/xunit.runner.utility.netcoreapp10.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/TaskManagementSystem.Tests.deps.json
@@ -31,7 +32,6 @@
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/testhost.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/Moq.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/Newtonsoft.Json.dll
-/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/NuGet.Frameworks.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/System.Configuration.ConfigurationManager.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/System.Diagnostics.EventLog.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll
@@ -118,6 +118,7 @@
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/obj/Debug/net8.0/TaskManagementSystem.Tests.AssemblyInfoInputs.cache
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/obj/Debug/net8.0/TaskManagementSystem.Tests.AssemblyInfo.cs
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/obj/Debug/net8.0/TaskManagementSystem.Tests.csproj.CoreCompileInputs.cache
+/Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/obj/Debug/net8.0/TaskManagementSystem.Tests.sourcelink.json
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/obj/Debug/net8.0/TaskMana.C517CA36.Up2Date
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/obj/Debug/net8.0/TaskManagementSystem.Tests.dll
 /Users/bilawalrizky/Documents/2025 - Project/SAT/TaskManagementSystem/TaskManagementSystem.Tests/obj/Debug/net8.0/refint/TaskManagementSystem.Tests.dll

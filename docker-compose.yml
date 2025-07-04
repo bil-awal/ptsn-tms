@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5001:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - taskmanagement-network
+
+  web:
+    build:
+      context: .
+      dockerfile: TaskManagementSystem.Web/Dockerfile
+    ports:
+      - "7002:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ApiSettings__BaseUrl=http://api:80/
+    depends_on:
+      - api
+    networks:
+      - taskmanagement-network
+
+networks:
+  taskmanagement-network:
+    driver: bridge
