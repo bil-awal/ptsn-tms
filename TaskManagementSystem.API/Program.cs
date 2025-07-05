@@ -118,4 +118,16 @@ using (var scope = app.Services.CreateScope())
 
 Log.Information("Starting Task Management System API on port {Port}", port);
 
-app.Run();
+try
+{
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application start-up failed");
+    throw;
+}
+finally
+{
+    Log.CloseAndFlush();
+}

@@ -1,5 +1,7 @@
 build:
   docker:
     web: Dockerfile
+  config:
+    ASPNETCORE_ENVIRONMENT: Production
 run:
   web: dotnet TaskManagementSystem.API.dll

@@ -29,17 +29,12 @@ RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 # Copy published files
 COPY --from=build /app/publish .
 
-# Create non-root user
-RUN useradd -m -u 1001 appuser && chown -R appuser:appuser /app
-USER appuser
-
-# Set environment variable
+# Heroku assigns a dynamic port
 ENV ASPNETCORE_URLS=http://+:$PORT
 ENV ASPNETCORE_ENVIRONMENT=Production
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=30s --retries=3 \
-  CMD curl -f http://localhost:${PORT}/health || exit 1
+# The PORT environment variable is set by Heroku
+EXPOSE $PORT
 
 # Run the application
-CMD ["dotnet", "TaskManagementSystem.API.dll"]
+CMD dotnet TaskManagementSystem.API.dll --urls http://+:$PORT

@@ -1,1 +1,0 @@
-web: cd TaskManagementSystem.Web/bin/publish && ./TaskManagementSystem.Web --urls http://*:$PORT
